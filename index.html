@@ -11,17 +11,17 @@
 <body>
     <nav class="navbar">
         <div id="aarkitekktButton">logo</div>
-        <div id="hamburger">
-            <div class="closed" id="line1"></div>
-            <div class="closed" id="line2"></div>
-            <div class="closed" id="line3"></div>
+        <div id="hamburger" onclick="toggleNav()">
+            <div class="toggleEl" id="line1"></div>
+            <div class="toggleEl" id="line2"></div>
+            <div class="toggleEl" id="line3"></div>
         </div>
-        <ul class="closed" id="navLinks">
-            <li class="navLink">dev</li>
-            <li class="navLink">3d</li>
-            <li class="navLink">built</li>
-            <li class="navLink">lab</li>
-            <li class="navLink">about</li>
+        <ul class="toggleEl" id="navLinks">
+            <li class="navLink" onclick="toggleNav()">dev</li>
+            <li class="navLink" onclick="toggleNav()">3d</li>
+            <li class="navLink" onclick="toggleNav()">built</li>
+            <li class="navLink" onclick="toggleNav()">lab</li>
+            <li class="navLink" onclick="toggleNav()">about</li>
         </ul>
     </nav>
     <section id="dev"></section>
