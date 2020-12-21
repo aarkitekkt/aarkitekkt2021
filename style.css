@@ -103,12 +103,71 @@ ul {
     cursor: pointer;
 }
 
+.sectionContent {
+    background-color: green;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 
+   LANDING
+*/
+
+#landing {
+    background-color: gray;
+    min-height: 100vh;
+    position: relative;
+}
+
 /* 
    DEV
 */
 
 #dev {
     background-color: purple;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* 
+   3D
+*/
+
+#threeD {
+    background-color: royalblue;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* 
+   BUILT
+*/
+
+#built {
+    background-color: salmon;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* 
+   LAB
+*/
+
+#lab {
+    background-color: palevioletred;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* 
+   ABOUT
+*/
+
+#about {
+    background-color: yellowgreen;
     min-height: 100vh;
     position: relative;
 }
