@@ -1,3 +1,114 @@
-#title {
-    color: red;
+/* 
+   NAVBAR
+*/
+
+html {
+    margin: -8px;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;    
+}
+
+#aarkitekktButton {
+    background-color: red;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    position: fixed;
+    z-index: 3;
+    top: 10px;
+    left: 10px;
+}
+
+#hamburger {    
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    z-index: 5;
+}
+
+#line1, #line2, #line3 {
+    transition-duration: .5s;
+    background-color: pink;
+    height: 3px;
+    border-radius: 2px;
+    position:fixed;
+    right: 0px;
+    z-index: 5;      
+}
+
+#line1{
+    top: 10px;
+    right: 10px;
+    width: 20px;
+}
+
+#line2{
+    top: 18px;
+    right: 10px;
+    width: 30px;
+}
+
+#line3{
+    top: 26px;
+    right: 10px;
+    width: 25px;
+}
+
+
+
+#line1.open {
+    width: 30px;
+    transform-origin: 0%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+}
+#line2.open {
+    width: 0px;
+    transition-duration: .5s;
+}
+#line3.open {
+    width: 30px;
+    transform-origin: 0%;
+    transform: rotate(-45deg) translate(-3px, 3px);
+    transition-duration: .5s;
+}
+
+#navLinks {
+    padding-top: 100px;
+    transition-duration: .5s;
+    position: fixed;
+    z-index: 3;
+    background: turquoise;
+    right: -201px;
+    width: 200px;
+    height: 100vh;
+}
+
+#navLinks.open {
+    transition-duration: .5s;
+    right: 0px;
+}
+
+.navLink {
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+/* 
+   DEV
+*/
+
+#dev {
+    background-color: purple;
+    min-height: 100vh;
+    position: relative;
 }
