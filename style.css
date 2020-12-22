@@ -1,10 +1,11 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
 /* 
    NAVBAR
 */
-
-html {
-    margin: -8px;
-}
 
 ul {
     list-style-type: none;
@@ -23,6 +24,14 @@ ul {
     z-index: 3;
     top: 10px;
     left: 10px;
+    transition: all .5s;
+    transform: translate(-100%);
+    opacity: 0;
+}
+
+#aarkitekktButton.isVisible {
+    transform: translate(0%);
+    opacity: 1;
 }
 
 #hamburger {    
@@ -62,8 +71,6 @@ ul {
     right: 10px;
     width: 25px;
 }
-
-
 
 #line1.open {
     width: 30px;
@@ -112,8 +119,11 @@ ul {
     transform: translate(-50%, -50%);
 }
 
-/* 
-   LANDING
+/* ____
+ __  --  _____
+    ___--       LANDING  >>>   
+       LANDING >>
+    ______
 */
 
 #landing {
