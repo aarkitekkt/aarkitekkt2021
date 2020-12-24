@@ -186,16 +186,24 @@ ul {
 
 .imgDes {
     position: absolute;
+    width: 100%;
+    text-align: center;
     bottom: -45px;
     padding: 15px;
     margin: 0px;
-    color: red;
+    color: white;
     background-color: black;
+    opacity: .7;
     transition: all .5s ease-out; 
+    transition-delay: .3s;
+}
+
+h5 {
+    padding: 0px;
+    margin: 0px;
 }
 
 .imgDes.activeDes {
-   color: green;
    bottom: 0px;
 }
 

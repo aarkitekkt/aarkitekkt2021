@@ -62,8 +62,6 @@ window.addEventListener('scroll', debounce(checkSlide));
 
 // _____3D____
 
-// let orderNum = -1;
-
 
 // Get all buttons with class="btn" inside the container
 var imgs = document.getElementsByClassName("img");
