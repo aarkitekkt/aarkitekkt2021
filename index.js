@@ -59,3 +59,22 @@ function checkSlide() {
 }
 
 window.addEventListener('scroll', debounce(checkSlide));
+
+// _____3D____
+
+// let orderNum = -1;
+
+
+// Get all buttons with class="btn" inside the container
+var imgs = document.getElementsByClassName("img");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < imgs.length; i++) {
+    imgs[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        if (current[0]) {
+            current[0].className = current[0].className.replace(" active", "");
+        }
+        this.className += " active";
+    });
+}

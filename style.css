@@ -3,6 +3,10 @@ body {
     padding: 0px;
 }
 
+section {
+    padding: 75px;
+}
+
 /* 
    NAVBAR
 */
@@ -110,19 +114,11 @@ ul {
     cursor: pointer;
 }
 
-.sectionContent {
-    background-color: green;
-    padding: 5px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 /* ____
  __  --  _____
     ___--       LANDING  >>>   
-       LANDING >>
+       landing >>
     ______
 */
 
@@ -132,8 +128,11 @@ ul {
     position: relative;
 }
 
-/* 
-   DEV
+/* ____
+ __  --  _____
+    ___--       DEV >>>   
+       dev >>
+    ______
 */
 
 #dev {
@@ -142,15 +141,71 @@ ul {
     position: relative;
 }
 
-/* 
-   3D
+/* ____
+ __  --  _____
+    ___--       3D  >>>   
+       three-d >>
+    ______
 */
 
 #threeD {
-    background-color: royalblue;
     min-height: 100vh;
     position: relative;
 }
+
+#threeDTitle {
+    background-color: tomato;
+}
+
+#galleryContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img {
+    height: 25vh;
+    flex-grow: 1;
+    overflow: hidden;
+    transition: all .5s ease-out;       
+}
+.img:hover {
+    flex-grow: 2;
+}
+.img.active {
+    height: 75vh;
+    width: 100%;
+}  
+
+.img3d {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+@media (max-width: 800px) {
+    .img {
+        height: 75px;
+        width: 100%; 
+    }
+
+    .img.active {
+        height: auto;
+    }
+
+    .img3d {
+        max-width: 100%;
+        /* max-height: 75vh;
+        min-width: 0; */
+        /* vertical-align: middle; */
+    }
+
+    section {
+        padding: 0px;
+    }
+}
+
+
 
 /* 
    BUILT
