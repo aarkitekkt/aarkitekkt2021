@@ -73,8 +73,13 @@ for (var i = 0; i < imgs.length; i++) {
     imgs[i].addEventListener("click", function () {
         var current = document.getElementsByClassName("active");
         if (current[0]) {
+            var currentChild = current[0].children;
             current[0].className = current[0].className.replace(" active", "");
+            currentChild[1].className = currentChild[1].className.replace(" activeDes", "");
+
         }
         this.className += " active";
+        var child = this.children;
+        child[1].className += " activeDes";
     });
 }
