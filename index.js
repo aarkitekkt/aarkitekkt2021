@@ -27,6 +27,84 @@ for (let i = 0; i < scrollLinks.length; i++) {
     })
 }
 
+// Connect icon animation to scroll location and display appopriate frame given location.
+
+const html = document.documentElement;
+const canvas = document.getElementById("iconAnimation");
+const context = canvas.getContext("2d");
+
+
+const currentFrame = (index, el) => (`./assets/testAnimation/ani_${el}-${index.toString().padStart(2, '0')}.png`);
+
+// const preloadImages = () => {
+//     for (let i = 1; i < frameCount; i++) {
+//         const img = new Image();
+//         img.src = currentFrame(i);
+//     }
+// };
+
+canvas.width = 300;
+canvas.height = 300;
+
+// preloadImages();
+
+const img = new Image();
+img.src = currentFrame(1, "landing");
+img.onload = function () { context.drawImage(img, 0, 0) };
+
+const updateImage = (index, el) => {
+    img.src = currentFrame(index, el);
+    context.drawImage(img, 0, 0);
+}
+
+const landingEl = document.querySelector('#landing');
+const devEl = document.querySelector('#dev');
+const threeDEl = document.querySelector('#threeD');
+const builtEl = document.querySelector('#built');
+const aboutEl = document.querySelector('#about');
+
+const sectionAnimation = (el) => {
+    const frameCount = 10;
+    const elTop = el.offsetTop;
+    const elHeight = el.offsetHeight;
+    const scrollFraction = (scrollY - elTop) / elHeight;
+    const frameIndex = Math.floor(scrollFraction * 10) + 1;
+
+    requestAnimationFrame(() => updateImage(frameIndex, el.id));
+}
+
+// determine which page section is current based on scroll position and run header animation for that section.
+window.addEventListener('scroll', () => {
+    if (scrollY > landingEl.offsetTop && scrollY < (landingEl.offsetTop + landingEl.offsetHeight)) {
+        sectionAnimation(landingEl);
+    } else if (scrollY >= devEl.offsetTop && scrollY < (devEl.offsetTop + devEl.offsetHeight)) {
+        sectionAnimation(devEl);
+    } else if (scrollY >= threeDEl.offsetTop && scrollY < (threeDEl.offsetTop + threeDEl.offsetHeight)) {
+        sectionAnimation(threeDEl);
+    } else if (scrollY >= builtEl.offsetTop && scrollY < (builtEl.offsetTop + builtEl.offsetHeight)) {
+        sectionAnimation(builtEl);
+    } else if (scrollY >= aboutEl.offsetTop && scrollY < (aboutEl.offsetTop + aboutEl.offsetHeight)) {
+        sectionAnimation(aboutEl);
+    } else { console.log("blerf"); }
+})
+
+
+
+
+// window.addEventListener('scroll', () => {
+//     const scrollTop = html.scrollTop;
+//     const maxScrollTop = html.scrollHeight - window.innerHeight;
+//     const scrollFraction = scrollTop / maxScrollTop;
+//     const frameIndex = Math.min(
+//         frameCount - 1,
+//         Math.ceil(scrollFraction * frameCount)
+//     );
+
+//     requestAnimationFrame(() => updateImage(frameIndex + 1))
+// });
+
+
+
 // Slide in logo when scrolled past landing section.
 
 function debounce(func, wait = 15, immediate = true) {
