@@ -29,7 +29,7 @@ h1 {
 */
 
 #navBackground {
-    background-color: yellowgreen;
+    background-color: gray;
     height: 150px;
     width: 100%;
     position: absolute;
@@ -78,7 +78,7 @@ ul {
     position: fixed;
     right: 0px;
     top: 0px;
-    z-index: 11;
+    z-index: 12;
 }
 
 #line1, #line2, #line3 {
@@ -128,19 +128,19 @@ ul {
 }
 
 #navLinks {
-    padding-top: 100px;
     transition-duration: .5s;
     position: fixed;
-    z-index: 3;
-    background: turquoise;
-    right: -201px;
-    width: 200px;
-    height: 100vh;
+    z-index: 11;
+    background: olive;
+    top: -510px;
+    width: 100%;
+    height: 400px;
+    clip-path: polygon(0% 0%,100% 0%,100% 77%,50% 100%,0% 77%);
 }
 
 #navLinks.open {
     transition-duration: .5s;
-    right: 0px;
+    top: 0px;
 }
 
 .navLink {
