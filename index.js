@@ -29,12 +29,12 @@ for (let i = 0; i < scrollLinks.length; i++) {
 
 // Connect icon animation to scroll location and display appopriate frame given location.
 
-const html = document.documentElement;
 const canvas = document.getElementById("iconAnimation");
 const context = canvas.getContext("2d");
 
 
 const currentFrame = (index, el) => (`./assets/testAnimation/ani_${el}-${index.toString().padStart(2, '0')}.png`);
+const frameCount = 10;
 
 // const preloadImages = () => {
 //     for (let i = 1; i < frameCount; i++) {
@@ -64,7 +64,6 @@ const builtEl = document.querySelector('#built');
 const aboutEl = document.querySelector('#about');
 
 const sectionAnimation = (el) => {
-    const frameCount = 10;
     const elTop = el.offsetTop;
     const elHeight = el.offsetHeight;
     const scrollFraction = (scrollY - elTop) / elHeight;
@@ -85,24 +84,19 @@ window.addEventListener('scroll', () => {
         sectionAnimation(builtEl);
     } else if (scrollY >= aboutEl.offsetTop && scrollY < (aboutEl.offsetTop + aboutEl.offsetHeight)) {
         sectionAnimation(aboutEl);
-    } else { console.log("blerf"); }
-})
+    }
+});
 
+// fix the nav once scrolled past landing
 
-
-
-// window.addEventListener('scroll', () => {
-//     const scrollTop = html.scrollTop;
-//     const maxScrollTop = html.scrollHeight - window.innerHeight;
-//     const scrollFraction = scrollTop / maxScrollTop;
-//     const frameIndex = Math.min(
-//         frameCount - 1,
-//         Math.ceil(scrollFraction * frameCount)
-//     );
-
-//     requestAnimationFrame(() => updateImage(frameIndex + 1))
-// });
-
+const navBg = document.querySelector("#navBackground");
+const topOfNav = navBg.offsetTop;
+const fixNav = () => {
+    if (window.scrollY >= topOfNav) {
+        navBg.classList.add('fixed');
+    } else { navBg.classList.remove('fixed'); }
+}
+window.addEventListener('scroll', fixNav);
 
 
 // Slide in logo when scrolled past landing section.

@@ -3,8 +3,21 @@ body {
     padding: 0px;
 }
 
-section {
+/* section {
+    display: block;
+} */
+
+.sectionContent {
     padding: 75px;
+}
+
+.sectionBase {
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    bottom: -149px;
+    z-index: 5;
+    clip-path: polygon(0% 0%,100% 0%,100% 40%,50% 100%,0% 40%);
 }
 
 h1 {
@@ -14,6 +27,22 @@ h1 {
 /* 
    NAVBAR
 */
+
+#navBackground {
+    background-color: yellowgreen;
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    bottom: -150px;
+    z-index: 9;
+    clip-path: polygon(0% 0%,100% 0%,100% 40%,50% 100%,0% 40%);
+}
+
+#navBackground.fixed {
+    position: fixed;
+    top: 0px;
+    box-shadow: 0 10px black;
+}
 
 ul {
     list-style-type: none;
@@ -25,11 +54,11 @@ ul {
 #aarkitekktButton {
     background-color: red;
     cursor: pointer;
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
+    width: 40px;
+    height: 40px;
+    border-radius: 290px;
     position: fixed;
-    z-index: 3;
+    z-index: 10;
     top: 10px;
     left: 10px;
     transition: all .5s;
@@ -49,7 +78,7 @@ ul {
     position: fixed;
     right: 0px;
     top: 0px;
-    z-index: 5;
+    z-index: 11;
 }
 
 #line1, #line2, #line3 {
@@ -120,14 +149,14 @@ ul {
 }
 
 canvas {
-    width: 300px;
-    height: 300px;
-    /* border-radius: 50%; */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     position: fixed ;
     left: 50%;
-    top: 10px;
     transform: translateX(-50%);
     z-index: 10;
+    mix-blend-mode: multiply;
 }
 
 /* ____
@@ -137,10 +166,15 @@ canvas {
     ______
 */
 
+
 #landing {
     background-color: gray;
     min-height: 100vh;
     position: relative;
+}
+
+#landingBase {
+    background-color: gray;
 }
 
 /* ____
@@ -150,16 +184,13 @@ canvas {
     ______
 */
 
-.sectionIcon {
-    mix-blend-mode: multiply;
-    position: absolute;
-    z-index: 2;
-}
-
 #dev {
     background-color: purple;
     min-height: 100vh;
     position: relative;
+}
+#devBase {
+    background-color: purple;
 }
 
 /* ____
@@ -170,8 +201,13 @@ canvas {
 */
 
 #threeD {
+    background-color: turquoise;
     min-height: 100vh;
     position: relative;
+}
+
+#threeDBase {
+    background-color: turquoise;
 }
 
 #threeDTitle {
@@ -262,6 +298,10 @@ h5 {
     background-color: salmon;
     min-height: 100vh;
     position: relative;
+}
+
+#builtBase {
+    background-color: salmon;
 }
 
 /* 
