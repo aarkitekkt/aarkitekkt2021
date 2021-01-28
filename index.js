@@ -88,7 +88,8 @@ window.addEventListener('scroll', () => {
 });
 
 // fix the nav once scrolled past landing
-
+const iconAni = document.querySelector("#iconAnimation");
+const topOfIcon = iconAni.offsetTop;
 const navBg = document.querySelector("#navBackground");
 const topOfNav = navBg.offsetTop;
 const fixNav = () => {
@@ -96,7 +97,13 @@ const fixNav = () => {
         navBg.classList.add('fixed');
     } else { navBg.classList.remove('fixed'); }
 }
+const fixIcon = () => {
+    if (window.scrollY >= topOfIcon) {
+        iconAni.classList.add('fixed');
+    } else { iconAni.classList.remove('fixed'); }
+}
 window.addEventListener('scroll', fixNav);
+window.addEventListener('scroll', fixIcon);
 
 
 // Slide in logo when scrolled past landing section.
