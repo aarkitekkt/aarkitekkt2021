@@ -2,7 +2,6 @@ console.log("aarkitekkt!");
 
 // _____NAVBAR____
 
-
 const toggleElements = document.getElementsByClassName("toggleEl");
 
 // when nav element is clicked, toggle the navbar open or closed.
@@ -32,21 +31,11 @@ for (let i = 0; i < scrollLinks.length; i++) {
 const canvas = document.getElementById("iconAnimation");
 const context = canvas.getContext("2d");
 
-
 const currentFrame = (index, el) => (`./assets/testAnimation/ani_${el}-${index.toString().padStart(2, '0')}.png`);
 const frameCount = 10;
 
-// const preloadImages = () => {
-//     for (let i = 1; i < frameCount; i++) {
-//         const img = new Image();
-//         img.src = currentFrame(i);
-//     }
-// };
-
 canvas.width = 300;
 canvas.height = 300;
-
-// preloadImages();
 
 const img = new Image();
 img.src = currentFrame(1, "landing");
@@ -139,8 +128,22 @@ function checkSlide() {
 
 window.addEventListener('scroll', debounce(checkSlide));
 
-// _____3D____
+// _____DEV____
 
+const devProjects = document.getElementsByClassName('devProject');
+
+const logProject = (el) => { console.log(el) };
+const projectImage = document.querySelector("#devImage");
+
+for (var i = 0; i < devProjects.length; i++) {
+    devProjects[i].addEventListener("click", function () {
+        console.log(this.id);
+        projectImage.setAttribute("src", `./assets/dev/${this.id}.png`)
+        // document.getElementById("dev").scrollIntoView({ behavior: "smooth" });
+    })
+}
+
+// _____3D____
 
 // Get all buttons with class="btn" inside the container
 var imgs = document.getElementsByClassName("img");
@@ -153,7 +156,6 @@ for (var i = 0; i < imgs.length; i++) {
             var currentChild = current[0].children;
             current[0].className = current[0].className.replace(" active", "");
             currentChild[1].className = currentChild[1].className.replace(" activeDes", "");
-
         }
         this.className += " active";
         var child = this.children;

@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
     <title>aarkitekkt</title>
@@ -37,13 +39,26 @@
 
     <section id="dev">
         <div class="sectionContent">
-            <h1>dev</h1>
+            <div class="sectionTitle">
+                <h1>dev</h1>
+            </div>
+            <div id="currentDevProject">
+                <img id="devImage" src="./assets/dev/dev1.png" alt="devimage">
+                <div id="devDescription"></div>
+            </div>
+            <div class="devProjects">
+                <img class="devProject" id="dev1" src="assets/dev/QuakeSml.jpg" alt="devImgSmall">
+                <img class="devProject" id="dev2" src="assets/dev/ZeesybakeSml.png" alt="devImgSmall">
+                <img class="devProject" id="dev3" src="assets/dev/workoutSml.png" alt="devImgSmall">
+                <img class="devProject" id="dev4" src="assets/dev/skiSml.jpg" alt="devImgSmall">
+            </div>
+
         </div>
         <div class="sectionBase" id="devBase"></div>
     </section>
     <section id="threeD">
         <div class="sectionContent">
-            <div id="threeDTitle">
+            <div class="sectionTitle">
                 <h1>3d</h1>
             </div>
             <div id="galleryContainer">
@@ -109,8 +124,8 @@
     </section>
     <section id="built">
         <div class="sectionContent">
-            <div id="builtTitle">
-                <h1>built</h1>
+            <div class="sectionTitle">
+                <h1 id="builtTitle">built</h1>
             </div>
             <div id="galleryContainer">
                 <div class="img" id="img1">

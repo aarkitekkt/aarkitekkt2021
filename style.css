@@ -8,8 +8,14 @@ body {
 } */
 
 .sectionContent {
-    padding-top: 250px;
+    padding-top: 150px;
     /* padding: 75px; */
+}
+
+.sectionTitle {
+    font-family: 'Comfortaa', cursive;
+    font-size: 60px;
+    margin: 50px;
 }
 
 .sectionBase {
@@ -30,7 +36,7 @@ h1 {
 */
 
 #navBackground {
-    background-color: gray;
+    background-color: #5e60ce;
     height: 150px;
     width: 100%;
     position: absolute;
@@ -53,7 +59,7 @@ ul {
 }
 
 #aarkitekktButton {
-    background-color: red;
+    background-color: #72efdd;
     cursor: pointer;
     width: 40px;
     height: 40px;
@@ -84,7 +90,7 @@ ul {
 
 #line1, #line2, #line3 {
     transition-duration: .5s;
-    background-color: pink;
+    background-color: #72efdd;
     height: 3px;
     border-radius: 2px;
     position:fixed;
@@ -132,7 +138,7 @@ ul {
     transition-duration: .5s;
     position: fixed;
     z-index: 11;
-    background: olive;
+    background: #6930C3;
     top: -510px;
     width: 100%;
     height: 400px;
@@ -145,6 +151,8 @@ ul {
 }
 
 .navLink {
+    color: #72efdd;
+    font-family: 'Comfortaa', cursive;
     margin-top: 50px;
     cursor: pointer;
 }
@@ -175,7 +183,7 @@ canvas.fixed {
 
 
 #landing {
-    background-color: gray;
+    background-color: #5e60ce;
     min-height: 100vh;
     position: relative;
 }
@@ -200,6 +208,34 @@ canvas.fixed {
     background-color: purple;
 }
 
+#currentDevProject {
+    display: flex;
+    justify-content: center;
+}
+
+#devImage {
+    width: 700px;
+    height: 400px;
+    margin: 20px;
+}
+
+.devProjects {
+    display: flex;
+    justify-content: center;
+}
+
+.devProject {
+    height: 200px;
+    flex-grow: 1;
+    background-color: chocolate;
+    margin: 5px;
+    transition: all .5s ease-out;   
+}
+
+.devProject:hover {
+    flex-grow: 3;
+}
+
 /* ____
  __  --  _____
     ___--       3D  >>>   
@@ -208,17 +244,17 @@ canvas.fixed {
 */
 
 #threeD {
-    background-color: rgb(221, 221, 221);
+    background-color: #DCF5F9;
     min-height: 100vh;
     position: relative;
 }
 
 #threeDBase {
-    background-color: turquoise;
+    background-color: #DCF5F9;
 }
 
 #threeDTitle {
-    background-color: tomato;
+    font-size: 60px;
 }
 
 #galleryContainer {
@@ -227,6 +263,7 @@ canvas.fixed {
 }
 
 .img {
+    opacity: .2;
     height: 25vh;
     flex-grow: 1;
     overflow: hidden;
@@ -236,9 +273,11 @@ canvas.fixed {
     border-radius: 5px;
 }
 .img:hover {
+    opacity: 1;
     flex-grow: 2;
 }
 .img.active {
+    opacity: 1;
     height: 75vh;
     width: 100%;
 } 
@@ -251,6 +290,7 @@ canvas.fixed {
 }
 
 .imgDes {
+    font-family: 'Comfortaa', cursive;
     position: absolute;
     width: 100%;
     text-align: center;
@@ -274,7 +314,7 @@ h5 {
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
     .img {
         height: 75px;
         width: 100%; 
@@ -284,7 +324,7 @@ h5 {
         height: auto;
     }
 
-    .img3d {
+    .img3d, .imgBuilt {
         max-width: 100%;
     }
 
@@ -304,13 +344,17 @@ h5 {
 */
 
 #built {
-    background-color: salmon;
+    background-color: #061822;
     min-height: 100vh;
     position: relative;
 }
 
 #builtBase {
-    background-color: salmon;
+    background-color: #061822;
+}
+
+#builtTitle {
+    color: #80FFDB;
 }
 
 .imgBuilt {
