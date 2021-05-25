@@ -130,7 +130,7 @@ window.addEventListener('scroll', debounce(checkSlide));
 
 // _____DEV____
 
-const devProjects = document.getElementsByClassName('devProject');
+const devProjects = document.getElementsByClassName('devProjectImage');
 
 const logProject = (el) => { console.log(el) };
 const projectImage = document.querySelector("#devImage");

@@ -32,9 +32,14 @@
     <div id="navBackground"></div>
     <section id="landing">
         <div class="sectionContent">
-            <h1>aarkitekkt</h1>
+            <div class="downArrow pulse"></div>
         </div>
-        <!-- <div class="sectionBase" id="landingBase"></div> -->
+        <div id="videoOverlay"></div>
+        <video autoplay muted loop id="landingVideo">
+            <source src="assets/blobVid.mp4" type="video/mp4">
+        </video>
+
+        <div class="sectionBase" id="landingBase"></div>
     </section>
 
     <section id="dev">
@@ -47,10 +52,18 @@
                 <div id="devDescription"></div>
             </div>
             <div class="devProjects">
-                <img class="devProject" id="dev1" src="assets/dev/QuakeSml.jpg" alt="devImgSmall">
-                <img class="devProject" id="dev2" src="assets/dev/ZeesybakeSml.png" alt="devImgSmall">
-                <img class="devProject" id="dev3" src="assets/dev/workoutSml.png" alt="devImgSmall">
-                <img class="devProject" id="dev4" src="assets/dev/skiSml.jpg" alt="devImgSmall">
+                <div class="devProject">
+                    <img class="devProjectImage" id="dev1" src="assets/dev/QuakeSml.jpg" alt="devImgSmall">
+                </div>
+                <div class="devProject">
+                    <img class="devProjectImage" id="dev2" src="assets/dev/ZeesybakeSml.png" alt="devImgSmall">
+                </div>
+                <div class="devProject">
+                    <img class="devProjectImage" id="dev3" src="assets/dev/workoutSml.png" alt="devImgSmall">
+                </div>
+                <div class="devProject">
+                    <img class="devProjectImage" id="dev4" src="assets/dev/skiSml.jpg" alt="devImgSmall">
+                </div>
             </div>
 
         </div>
