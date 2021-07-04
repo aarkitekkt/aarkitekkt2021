@@ -128,6 +128,20 @@ function checkSlide() {
 
 window.addEventListener('scroll', debounce(checkSlide));
 
+// Hide down arrow once user has scrolled down 300px.
+
+function hideArrow() {
+    const downArrow = document.querySelector('#downArrow');
+
+    if (window.scrollY > 150) {
+        downArrow.classList.add('hidden');
+    } else {
+        downArrow.classList.remove('hidden');
+    }
+}
+
+window.addEventListener('scroll', debounce(hideArrow));
+
 // _____DEV____
 
 const devProjects = document.getElementsByClassName('devProjectImage');

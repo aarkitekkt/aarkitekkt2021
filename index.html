@@ -13,14 +13,16 @@
 
 <body>
     <nav class="navbar">
-        <div class="scrollTo" id="aarkitekktButton" data-to="landing">logo</div>
+        <div class="scrollTo" id="aarkitekktButton" data-to="landing"><img id="aarkLogo"
+                src="./assets/icons/aark_logo.png" alt="logoIcon"></div>
         <div id="hamburger" onclick="toggleNav()">
             <div class="toggleEl" id="line1"></div>
             <div class="toggleEl" id="line2"></div>
             <div class="toggleEl" id="line3"></div>
         </div>
         <ul class="toggleEl" id="navLinks">
-            <li class="navLink scrollTo" data-to="landing" onclick="toggleNav()">aark</li>
+            <li class="navLink scrollTo" data-to="landing" onclick="toggleNav()"><img id="aarkLogo"
+                    src="./assets/icons/aark_logo.png" alt="logoIcon"></li>
             <li class="navLink scrollTo" data-to="dev" onclick="toggleNav()">dev</li>
             <li class="navLink scrollTo" data-to="threeD" onclick="toggleNav()">3d</li>
             <li class="navLink scrollTo" data-to="built" onclick="toggleNav()">built</li>
@@ -32,14 +34,14 @@
     <div id="navBackground"></div>
     <section id="landing">
         <div class="sectionContent">
-            <div class="downArrow pulse"></div>
+            <div id="downArrow" class="hidden"></div>
         </div>
         <div id="videoOverlay"></div>
         <video autoplay muted loop id="landingVideo">
             <source src="assets/blobVid.mp4" type="video/mp4">
         </video>
 
-        <div class="sectionBase" id="landingBase"></div>
+        <!-- <div class="sectionBase" id="landingBase"></div> -->
     </section>
 
     <section id="dev">
@@ -67,7 +69,7 @@
             </div>
 
         </div>
-        <div class="sectionBase" id="devBase"></div>
+        <!-- <div class="sectionBase" id="devBase"></div> -->
     </section>
     <section id="threeD">
         <div class="sectionContent">
@@ -133,7 +135,7 @@
                 </div>
             </div>
         </div>
-        <div class="sectionBase" id="threeDBase"></div>
+        <!-- <div class="sectionBase" id="threeDBase"></div> -->
     </section>
     <section id="built">
         <div class="sectionContent">
@@ -188,7 +190,7 @@
             </div>
         </div>
         </div>
-        <div class="sectionBase" id="builtBase"></div>
+        <!-- <div class="sectionBase" id="builtBase"></div> -->
     </section>
     <!-- <section id="lab">
         <div class="sectionContent">
